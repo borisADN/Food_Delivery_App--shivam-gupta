@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/pages/food_detail.dart';
-import 'package:food_delivery/pages/home.dart';
+import 'package:food_delivery/pages/bottomnav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: BottomNav(),
     );
   }
 }
