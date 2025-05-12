@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/home.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -48,12 +49,18 @@ class _OnboardingState extends State<Onboarding> {
                   color: Color(0xFFff734C),
                   borderRadius: BorderRadius.circular(20)),
               child: Center(
-                child: Text('Commencer',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white)),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Home()));
+                  },
+                  child: Text('Commencer',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white)),
+                ),
               ),
             ),
           )

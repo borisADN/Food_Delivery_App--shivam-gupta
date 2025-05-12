@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/pages/food_detail.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -175,67 +176,77 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.zero,
                   children: [
                     SizedBox(width: 10),
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 10, right: 20),
-                      child: Material(
-                        elevation: 3,
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          padding: const EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FoodDetail(),
                           ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(20),
-                                child: Image.asset(
-                                  'lib/images/pizza1.png', // ou le bon chemin
-                                  width: 180,
-                                  height: 180,
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (context, error, stackTrace) {
-                                    return Text('Erreur : $error');
-                                  },
+                        );
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 10, right: 20),
+                        child: Material(
+                          elevation: 3,
+                          borderRadius: BorderRadius.circular(20),
+                          child: Container(
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(20),
+                                  child: Image.asset(
+                                    'lib/images/pizza1.png', // ou le bon chemin
+                                    width: 180,
+                                    height: 180,
+                                    fit: BoxFit.cover,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return Text('Erreur : $error');
+                                    },
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(height: 10),
-                              Text('Pizza',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black)),
-                              Text('Pain, fromage, tomate',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black)),
-                              const SizedBox(height: 5),
-                              Row(
-                                children: [
-                                  Text('4500 FCFA',
-                                      style: TextStyle(
-                                          fontSize: 24,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black)),
-                                  SizedBox(width: 30),
-                                  Container(
-                                    padding: const EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFFff734C),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Icon(
-                                      Icons.add,
-                                      color: Colors.white,
-                                      size: 30,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
+                                const SizedBox(height: 10),
+                                Text('Pizza',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
+                                Text('Pain, fromage, tomate',
+                                    style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black)),
+                                const SizedBox(height: 5),
+                                Row(
+                                  children: [
+                                    Text('4500 FCFA',
+                                        style: TextStyle(
+                                            fontSize: 24,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black)),
+                                    SizedBox(width: 30),
+                                    Container(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFff734C),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.white,
+                                        size: 30,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),

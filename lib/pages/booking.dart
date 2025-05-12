@@ -10,6 +10,10 @@ class Booking extends StatefulWidget {
 class _BookingState extends State<Booking> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Text('Booking'),
+      ),
+    );
   }
 }

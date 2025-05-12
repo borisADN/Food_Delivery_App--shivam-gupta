@@ -1,0 +1,2 @@
+C:/Users/Lenovo-Ideapad/Desktop/FLUTTER/A GITER/Food_Delivery_App--shivam-gupta/android/app/.cxx/Debug/264p631m/x86/CMakeFiles/edit_cache.dir
+C:/Users/Lenovo-Ideapad/Desktop/FLUTTER/A GITER/Food_Delivery_App--shivam-gupta/android/app/.cxx/Debug/264p631m/x86/CMakeFiles/rebuild_cache.dir
